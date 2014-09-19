@@ -1,0 +1,27 @@
+
+
+// Needs to define FEATURE_DEFINE_MACRO
+
+#define FEATURE_DEFINE_MACRO_ID                      1
+#define FEATURE_DEFINE_MACRO_OBJECT                  2
+#define FEATURE_DEFINE_MACRO_OBJECT_POINTER          3
+#define FEATURE_DEFINE_MACRO_MAP_FEATURE_TO_TYPE     4
+
+
+
+#if FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_ID
+#define FEATURE_DEFINE(name, type, default) name,
+#elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT
+#define FEATURE_DEFINE(name, type, deflt) static type mod_##name = type(deflt);
+#elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT_POINTER
+#define FEATURE_DEFINE(name, type, deflt) &mod_##name,
+#elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_MAP_FEATURE_TO_TYPE
+#define FEATURE_DEFINE(name, type, deflt) feature_to_type<name, tpye>
+#else
+#error FEATURE_DEFINE_MACRO needs to be defined before including this file
+#endif
+
+#include "FeatureDefines.def"
+
+#undef FEATURE_DEFINE_MACRO
+#undef FEATURE_DEFINE
