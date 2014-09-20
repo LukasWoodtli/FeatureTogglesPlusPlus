@@ -6,12 +6,7 @@
 using namespace std;
 using namespace FeaturesTogglePlusPlus;
 
-static void printMessage(const string & msg);
 
-static void printMessage(const string & msg)
-{
-  std::cout << msg << std::endl;
-}
 static void printMessage(int featureNo, bool enabled);
 
 static void printMessage(int featureNo, bool enabled)
@@ -44,7 +39,11 @@ int main()
     printMessage(2, isFeatureEnabled);
     
 
-
+    StaticFeature f1 = GET_FEATURE(MyFirstFeature);
+    // Fails as it should: f3.enable(false);
+    
+    DynamicFeature f3 = GET_FEATURE(MyDynamicFeature);
+    f3.enable(false);
 
 	waitForKey();
 

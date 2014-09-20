@@ -3,15 +3,25 @@
 
 namespace FeaturesTogglePlusPlus{
 
+    
+    template<typename T>
+    struct featureClassType_t
+    {
+        typedef T featureType;
+    };
+    
+
 class IFeature
 {
 public:
     virtual bool isEnabled() const = 0;
     
+;
 protected:
     virtual ~IFeature() {}
 };
     
+
 
 class StaticFeature : public IFeature
 {
