@@ -6,13 +6,16 @@ namespace FeaturesTogglePlusPlus{
 
     
 
-    
+#define DISABLE_COPY_AND_ASSIGN(TypeName) \
+TypeName(const TypeName&);   \
+void operator=(const TypeName&)
 
     
 
 
 class StaticFeature
 {
+    DISABLE_COPY_AND_ASSIGN(StaticFeature);
 public:
     StaticFeature() : m_enabled(false) {}
     StaticFeature(bool enable);
@@ -27,6 +30,7 @@ private:
 
 class DynamicFeature
 {
+    DISABLE_COPY_AND_ASSIGN(DynamicFeature);
 public:
     DynamicFeature(bool enable) : m_enabled(enable) {}
         

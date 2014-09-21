@@ -39,10 +39,10 @@ int main()
     printMessage(3, isFeatureEnabled);
     
 
-    StaticFeature f1 = getFeature(MyFirstFeature);
+    StaticFeature& f1 = getFeature(MyFirstFeature);
      /*Fails as it should: f3.enable(false);*/
     
-    DynamicFeature f3 = getFeature(MyDynamicFeature);
+    DynamicFeature& f3 = getFeature(MyDynamicFeature);
     f3.enable(true);
     isFeatureEnabled = featureEnabled(MyDynamicFeature);
     printMessage(3, isFeatureEnabled);

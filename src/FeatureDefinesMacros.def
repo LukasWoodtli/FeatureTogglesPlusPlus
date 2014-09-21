@@ -14,7 +14,7 @@
 
 
 #elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT
-#define FEATURE_DEFINE(name, type, deflt) static type mod_##name = type(deflt);
+#define FEATURE_DEFINE(name, type, deflt) static type mod_##name(deflt);
 
 
 #elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT_POINTER

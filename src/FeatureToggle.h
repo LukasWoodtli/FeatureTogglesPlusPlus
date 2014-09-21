@@ -37,10 +37,12 @@ namespace FeaturesTogglePlusPlus{
 
 
     template <featureId_t id>
-    const typename idToType_t<id>::Type & _getFeature()
+    typename idToType_t<id>::Type& _getFeature()
     {
         using T = typename idToType_t<id>::Type;
-        return *(static_cast<T*>(__getFeature(id)));
+        T * const pFeature = static_cast<T*>(__getFeature(id));
+        T & feature = *pFeature;
+        return feature;
     }
 
     
