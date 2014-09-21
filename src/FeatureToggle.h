@@ -8,10 +8,9 @@ namespace FeaturesTogglePlusPlus{
 
   enum featureId_t
   {
-      featureId_beginn,
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_ID
 #include "FeatureDefinesMacros.def"
-      featureId_end
+     FEATURE_NMB
   };
     
 
@@ -23,24 +22,39 @@ namespace FeaturesTogglePlusPlus{
     
     
     
+    
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_MAP_FEATURE_TO_TYPE
 #include "FeatureDefinesMacros.def"
     
     
 
-
-  bool featureEnabled(featureId_t id);
-
-
-    IFeature* getFeature(featureId_t id);
-
-#define GET_FEATURE(id) getFeature<id, idToType_t<id>::Type>()
     
-    template<featureId_t T_id, typename T_type>
-    T_type & getFeature()
+
+    void* __getFeature(featureId_t id);
+
+#define getFeature(id) _getFeature<id>()
+    
+
+
+    template <featureId_t id>
+    const typename idToType_t<id>::Type & _getFeature()
     {
-        return *(static_cast<T_type*>(getFeature(T_id)));
+        using T = typename idToType_t<id>::Type;
+        return *(static_cast<T*>(__getFeature(id)));
     }
+
+    
+#define featureEnabled(id) _featureEnabled<id>()
+    
+    template <featureId_t Id>
+    bool _featureEnabled()
+    {
+        using T = typename idToType_t<Id>::Type;
+        const T & feature = _getFeature<Id>();
+        return feature.isEnabled();
+    }
+    
+    
     
 
 }

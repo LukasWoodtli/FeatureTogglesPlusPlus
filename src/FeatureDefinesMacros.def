@@ -11,12 +11,22 @@
 
 #if FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_ID
 #define FEATURE_DEFINE(name, type, default) name,
+
+
 #elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT
 #define FEATURE_DEFINE(name, type, deflt) static type mod_##name = type(deflt);
+
+
 #elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_OBJECT_POINTER
 #define FEATURE_DEFINE(name, type, deflt) &mod_##name,
+
+
 #elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_MAP_FEATURE_TO_TYPE
 #define FEATURE_DEFINE(name, type, deflt) template<> struct idToType_t<name> { typedef type Type; }; // from https://www.justsoftwaresolutions.co.uk/articles/exprtype.pdf
+
+
+
+
 #else
 #error FEATURE_DEFINE_MACRO needs to be defined before including this file
 #endif

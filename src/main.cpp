@@ -36,14 +36,16 @@ int main()
     printMessage(2, isFeatureEnabled);
     
     isFeatureEnabled = featureEnabled(MyDynamicFeature);
-    printMessage(2, isFeatureEnabled);
+    printMessage(3, isFeatureEnabled);
     
 
-    StaticFeature f1 = GET_FEATURE(MyFirstFeature);
-    // Fails as it should: f3.enable(false);
+    StaticFeature f1 = getFeature(MyFirstFeature);
+     /*Fails as it should: f3.enable(false);*/
     
-    DynamicFeature f3 = GET_FEATURE(MyDynamicFeature);
-    f3.enable(false);
+    DynamicFeature f3 = getFeature(MyDynamicFeature);
+    f3.enable(true);
+    isFeatureEnabled = featureEnabled(MyDynamicFeature);
+    printMessage(3, isFeatureEnabled);
 
 	waitForKey();
 

@@ -18,21 +18,15 @@ static void * mod_features[] = {
 
     
 
-    IFeature * getFeature(featureId_t id)
+    void * __getFeature(featureId_t id)
     {
-        return (IFeature *)mod_features[id];
+        return mod_features[id];
     }
     
 
 
 
 
-  bool featureEnabled(featureId_t id)
-  {
-      
-      return getFeature(id)->isEnabled();
-  }
-    
 
 
 }
