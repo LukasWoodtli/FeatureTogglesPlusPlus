@@ -24,10 +24,10 @@ Design Goals
 To Do's
 -------
 This following notes are mainly for myself.
-- User Config:
-    + userconfig.h
-    + userfeatures.def
-    + userfeaturesclasses.h
+- User Config
+    + General configs (defines...)
+    + Features definitions
+    + Feature classes
 - Doxygen
     + User doc
     + Developer doc
@@ -42,3 +42,18 @@ This following notes are mainly for myself.
     + Names (char[]) for listing all features
     + status text (std::string)
     + status infos (std::stream?)
+- Folder Structure
+    + src
+        + userconfig
+            + userconfig.h
+            + userfeatures.def
+            + userfeaturesclasses.h
+        + lib
+            + features.def (includes userfeatures.def)
+            + featuredefmacros.def (includes features.def)
+            + FeaturesTogglePlusPlus.cpp
+            + lib.h (lib.cpp?)
+            + config.h
+        + include
+            + FeaturesTogglePlusPlus.h
+            + featureclasses.h (userfeaturesclasses.h)
