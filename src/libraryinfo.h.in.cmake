@@ -2,7 +2,6 @@
 #ifndef HEADER_SRC_APPINFO_H_INCLUDED
 #define HEADER_SRC_APPINFO_H_INCLUDED
 
-
 /*
  * AUTO-GENERATION WARNING:
  *     This file has been automatically generated from "appinfo.h.in.cmake".
