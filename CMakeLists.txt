@@ -24,7 +24,6 @@ SET (APPLICATION_ID "${APPLICATION_VENDOR_ID}.${PROJECT_NAME}")
 option(UNIT_TESTS_ENABLED "Build and run unit tests test" OFF)
 option(DOC_GEN_ENABLED "Build Doxygen user documentation" OFF)
 
-
 #
 # Debugging Options
 #
