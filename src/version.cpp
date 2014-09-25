@@ -2,8 +2,8 @@
 #include "libraryinfo.h"
 
 EXTERNC int projectname_version_major()
-{ 
-    return APPLICATION_VERSION_MAJOR; 
+{
+    return APPLICATION_VERSION_MAJOR;
 }
 
 EXTERNC int projectname_version_minor()
