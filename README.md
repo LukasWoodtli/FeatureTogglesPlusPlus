@@ -9,7 +9,7 @@ This project is still in heavy development. It can't be used yet.
 
 Project Mission
 ---------------
-The aim of this library is to provide a simple but extensible mechanism for featrue toggles in C++.
+The aim of this library is to provide a simple but extensible mechanism for feature toggles in C++.
 
 Design Goals
 ------------
@@ -35,7 +35,6 @@ This following notes are mainly for myself.
 - Unit Tests
     + UnitTest++
     + cmake cli param for enabling/disabling
-
 - Logging
     + logging4cxx?
 - userconfig.h
@@ -57,3 +56,8 @@ This following notes are mainly for myself.
         + include
             + FeaturesTogglePlusPlus.h
             + featureclasses.h (userfeaturesclasses.h)
+- Run tools
+    + gnu size
+    + Static analysis (cppcheck, clang static analyzer, ChkSem)
+    + Dynamic analysis (valgrind, xcode instruments)
+    + Code metrics (CCCC
