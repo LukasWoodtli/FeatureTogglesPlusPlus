@@ -47,6 +47,12 @@ int main()
     isFeatureEnabled = featureEnabled(MyDynamicFeature);
     printMessage(3, isFeatureEnabled);
 
+    std::cout << "Printing all features:\n";
+    for (uint_fast8_t i = 0; i<FEATURE_NMB; ++i)
+        std::cout << _getFeatureName((featureId_t) i);
+    
+    
+    
 	waitForKey();
 
   return 0;

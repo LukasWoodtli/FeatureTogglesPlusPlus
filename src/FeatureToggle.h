@@ -58,6 +58,9 @@ namespace FeaturesTogglePlusPlus{
     
     
     
+    // ifdef
+    char const * const _getFeatureName(featureId_t id);
+    
 
 }
 

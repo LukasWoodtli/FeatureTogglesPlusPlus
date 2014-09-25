@@ -25,8 +25,8 @@
 #define FEATURE_DEFINE(name, type, deflt) template<> struct idToType_t<name> { typedef type Type; }; // from https://www.justsoftwaresolutions.co.uk/articles/exprtype.pdf
 
 
-
-
+#elif FEATURE_DEFINE_MACRO == FEATURE_DEFINE_MACRO_NAME_STRINGS
+#define FEATURE_DEFINE(name, type, deflt) #name,
 #else
 #error FEATURE_DEFINE_MACRO needs to be defined before including this file
 #endif
