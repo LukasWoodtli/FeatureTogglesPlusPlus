@@ -1,24 +1,15 @@
 /************************************************************************************/
 /*! \file
- <!--------------------------------------------------------------------------------->
- \section desc Module Description
 
- - Project           : FeaturesToggle++
- - Functional Block  :
- - Main Class        :
+ - Project           : FeatureToggles++
+ - Functional Block  : Feature List, handling of all feature objects
+ 
+ License: This project has not a license yet. You can do what ever you want with
+ this code. Just don't blame me if something goes wrong!
 
  In this file a list with all feature obects is generated. There is also an array with
  pointers (void*) toeach object. And there are some functions that help getting a
  feature object (and casting is properly).
-
-
- <!--Git Info----------------------------------------------------------------------->
- \section git Git Information
-
- $HeadURL: $
- $Id:$
- $Date: $
- $Author:  $
 
  */
 /************************************************************************************/
@@ -84,7 +75,7 @@ featureId_t _getFeaureId(char const * const featureName)
 
 
 
-void * __getFeature(featureId_t id)
+void * const __getFeature(featureId_t id)
 {
     return mod_features[id];
 }

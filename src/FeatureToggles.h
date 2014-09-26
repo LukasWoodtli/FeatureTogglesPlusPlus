@@ -1,3 +1,18 @@
+/************************************************************************************/
+/*! \file
+ 
+ - Project           : FeatureToggles++
+ - Functional Block  : Feature List
+ 
+ License: This project has not a license yet. You can do what ever you want with
+ this code. Just don't blame me if something goes wrong!
+ 
+ This is the main entry point to get access to the feature objects and the information
+ they store. Use the macro getFeature(id) to get a reference to a feature object.
+ 
+ */
+/************************************************************************************/
+
 #ifndef __FEATURETOGGLE_H__
 #define __FEATURETOGGLE_H__
 
@@ -31,7 +46,7 @@ struct idToType_t
 
 
 
-void* __getFeature(featureId_t id);
+void * const __getFeature(featureId_t id);
 
 #define getFeature(id) _getFeature<id>()
 

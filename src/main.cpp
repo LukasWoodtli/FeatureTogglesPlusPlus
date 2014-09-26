@@ -1,3 +1,18 @@
+/************************************************************************************/
+/*! \file
+ 
+ - Project           : FeatureToggles++
+ - Functional Block  : Feature List
+ 
+ License: This project has not a license yet. You can do what ever you want with
+ this code. Just don't blame me if something goes wrong!
+ 
+ This file has just some example use cases of the library.
+ 
+*/
+/************************************************************************************/
+
+ 
 #include <iostream>
 #include <string>
 #include "FeatureToggles.h"
@@ -17,15 +32,15 @@ static void printMessage(int featureNo, bool enabled)
         enabledText = " NOT";
     }
 
-
-    std::cout << "Feature " << featureNo <<  enabledText << " activated" << std::endl;
+    std::cout << "Feature " << featureNo <<
+                enabledText << " activated" << std::endl;
 }
 
 
 void waitForKey()
 {
-    int age;
-    std::cin >> age;
+    int a;
+    std::cin >> a;
 }
 
 int main()
@@ -41,7 +56,8 @@ int main()
     printMessage(3, isFeatureEnabled);
 
 
-    StaticFeature& f1 = getFeature(MyFirstFeature);
+    // You cannot call enable(bool) on a static feature.
+    // StaticFeature& f1 = getFeature(MyFirstFeature);
     /*Fails as it should: f3.enable(false);*/
 
     DynamicFeature& f3 = getFeature(MyDynamicFeature);
