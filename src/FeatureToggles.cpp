@@ -24,7 +24,7 @@
 /************************************************************************************/
 
 
-#include "FeatureToggle.h"
+#include "FeatureToggles.h"
 #include "Feature.h"
 
 // ifdef

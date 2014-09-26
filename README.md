@@ -58,6 +58,6 @@ This following notes are mainly for myself.
             + featureclasses.h (userfeaturesclasses.h)
 - Run tools
     + gnu size
-    + Static analysis (cppcheck, clang static analyzer, ChkSem)
+    + Static analysis (cppcheck, clang static analyzer, ChkSem, oclint)
     + Dynamic analysis (valgrind, xcode instruments)
-    + Code metrics (CCCC
+    + Code metrics (CCCC...)

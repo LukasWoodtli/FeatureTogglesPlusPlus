@@ -18,9 +18,9 @@ class StaticFeature
     DISABLE_COPY_AND_ASSIGN(StaticFeature);
 public:
     StaticFeature() : m_enabled(false) {}
-    StaticFeature(bool enable);
+    StaticFeature(bool enable) : m_enabled(enable) {}
 
-    virtual ~StaticFeature(void);
+    virtual ~StaticFeature(void) {}
     virtual bool isEnabled() const
     {
         return m_enabled;

@@ -25,6 +25,13 @@ option(UNIT_TESTS_ENABLED "Build and run unit tests test" OFF)
 option(DOC_GEN_ENABLED "Build Doxygen user documentation" OFF)
 
 #
+# Static Analysis
+#
+OPTION(CMAKE_EXPORT_COMPILE_COMMANDS "Generate compile_commands.json
+# for OCLint" ON) #used for oclint. Nor working yet
+
+
+#
 # Debugging Options
 #
 SET (CMAKE_VERBOSE_MAKEFILE 0) # Use 1 for debugging, 0 for release
@@ -95,6 +102,8 @@ ENDIF(UNIT_TESTS_ENABLED)
 IF (EXISTS "${MAINFOLDER}/include/${PROJECT_NAME}" AND IS_DIRECTORY "${MAINFOLDER}/include/${PROJECT_NAME}")
     INSTALL(DIRECTORY "${MAINFOLDER}/include/${PROJECT_NAME}" DESTINATION "include")
 ENDIF (EXISTS "${MAINFOLDER}/include/${PROJECT_NAME}" AND IS_DIRECTORY "${MAINFOLDER}/include/${PROJECT_NAME}")
+
+
 
 #
 # Add Documentation Targets
