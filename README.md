@@ -1,7 +1,7 @@
-FeaturesTogglePlusPlus
+FeatureToggles++
 ======================
 
-A small library that implements feature toggles (feature switches).
+A small library that implements feature toggles (feature switches) in C++.
 
 Development Staus
 -----------------
@@ -28,9 +28,9 @@ This following notes are mainly for myself.
     + General configs (defines...)
     + Features definitions
     + Feature classes
-- Doxygen
-    + User doc
-    + Developer doc
+- Documentation
+    + User doc (Read the Doc?)
+    + Developer doc (Doxygen)
     + cmake cli param for user/developer doc
 - Unit Tests
     + UnitTest++
