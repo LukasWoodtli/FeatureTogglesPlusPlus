@@ -2,6 +2,7 @@ FeatureToggles++
 ======================
 
 A small library that implements feature toggles (feature switches) in C++.
+Martin Fowler has an excellent description of [feature toggles] (http://martinfowler.com/bliki/FeatureToggle.html).
 
 Development Staus
 -----------------
