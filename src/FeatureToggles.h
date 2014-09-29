@@ -55,7 +55,7 @@ void * const __getFeature(featureId_t id);
 template <featureId_t id>
 typename idToType_t<id>::Type& _getFeature()
 {
-    using T = typename idToType_t<id>::Type;
+    typedef idToType_t<id>::Type T;
     T * const pFeature = static_cast<T*>(__getFeature(id));
     T & feature = *pFeature;
     return feature;
@@ -67,7 +67,7 @@ typename idToType_t<id>::Type& _getFeature()
 template <featureId_t Id>
 bool _featureEnabled()
 {
-    using T = typename idToType_t<Id>::Type;
+    typedef idToType_t<Id>::Type T;
     const T & feature = _getFeature<Id>();
     return feature.isEnabled();
 }

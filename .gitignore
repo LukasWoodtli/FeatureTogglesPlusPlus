@@ -30,3 +30,5 @@
 src/appinfo.h
 
 src/libraryinfo.h
+*.ilk
+*.pdb

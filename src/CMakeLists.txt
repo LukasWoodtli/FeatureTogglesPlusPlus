@@ -1,4 +1,4 @@
-FILE (GLOB_RECURSE project_SRCS *.cpp *.cxx *.cc *.C *.c *.h *.hpp *.def)
+FILE (GLOB_RECURSE project_SRCS *.cpp *.cxx *.cc *.C *.c *.h *.hpp)
 SET (project_LIBS ${Log4Cxx_LIBRARIES})
 SET (project_BIN ${PROJECT_NAME})
 
