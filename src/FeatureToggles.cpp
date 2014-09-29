@@ -29,7 +29,7 @@ namespace FeaturesTogglePlusPlus
 
 // objects of features
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_OBJECT
-#include "FeatureDefinesMacros.def"
+#include "FeatureDefinesMacros.xdef"
 
 
 
@@ -37,7 +37,7 @@ namespace FeaturesTogglePlusPlus
 static void * const mod_features[] =
 {
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_OBJECT_POINTER
-#include "FeatureDefinesMacros.def"
+#include "FeatureDefinesMacros.xdef"
 };
 
 
@@ -47,7 +47,7 @@ static void * const mod_features[] =
 static char const * const mod_featureNames[] =
 {
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_NAME_STRINGS
-#include "FeatureDefinesMacros.def"
+#include "FeatureDefinesMacros.xdef"
 };
 
 

@@ -25,7 +25,7 @@ namespace FeaturesTogglePlusPlus
 enum featureId_t
 {
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_ID
-#include "FeatureDefinesMacros.def"
+#include "FeatureDefinesMacros.xdef"
     FEATURE_NMB
 };
 
@@ -40,7 +40,7 @@ struct idToType_t
 
 
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_MAP_FEATURE_TO_TYPE
-#include "FeatureDefinesMacros.def"
+#include "FeatureDefinesMacros.xdef"
 
 
 
