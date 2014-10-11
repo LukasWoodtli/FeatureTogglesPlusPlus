@@ -1,4 +1,4 @@
-# <Copyright Holder>. Copyright (C) <Copyright Year(s)>. <License>.
+# Lukas Woodtli Copyright (C) 2014
 
 #
 # Project Properties
@@ -27,8 +27,9 @@ option(DOC_GEN_ENABLED "Build Doxygen user documentation" OFF)
 #
 # Static Analysis
 #
-OPTION(CMAKE_EXPORT_COMPILE_COMMANDS "Generate compile_commands.json
-# for OCLint" ON) #used for oclint. Nor working yet
+#OPTION(CMAKE_EXPORT_COMPILE_COMMANDS "Generate compile_commands.json
+# for OCLint" ON) # used for oclint. Nor working yet
+
 
 
 #
