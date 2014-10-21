@@ -34,3 +34,4 @@ src/libraryinfo.h
 *.pdb
 
 build/
+bin/
