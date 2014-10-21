@@ -31,7 +31,8 @@
 #error FEATURE_DEFINE_MACRO needs to be defined before including this file
 #endif
 
-#include "FeatureDefines.xdef"
+#include "FeatureTogglesPlusPlus/FeatureDefines.xdef"
+
 
 #undef FEATURE_DEFINE_MACRO
 #undef FEATURE_DEFINE

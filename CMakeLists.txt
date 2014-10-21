@@ -53,8 +53,7 @@ LIST (APPEND CMAKE_PREFIX_PATH "${MAINFOLDER}/thirdparty")
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/tools/share/cmake)
 
-INCLUDE_DIRECTORIES("${MAINFOLDER}/include")
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+INCLUDE_DIRECTORIES("${MAINFOLDER}/include" "${MAINFOLDER}/src")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 #

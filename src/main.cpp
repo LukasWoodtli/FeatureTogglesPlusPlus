@@ -17,7 +17,7 @@
 #include <string>
 #include <stdint.h>
 
-#include "FeatureToggles.h"
+#include "FeatureTogglesPlusPlus/FeatureToggles.h"
 
 
 using namespace std;

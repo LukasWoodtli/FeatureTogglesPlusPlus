@@ -15,7 +15,7 @@
 /************************************************************************************/
 
 
-#include "FeatureToggles.h"
+#include "FeatureTogglesPlusPlus/FeatureToggles.h"
 #include "Feature.h"
 
 // ifdef
@@ -39,7 +39,6 @@ static void * const mod_features[] =
 #define FEATURE_DEFINE_MACRO FEATURE_DEFINE_MACRO_OBJECT_POINTER
 #include "FeatureDefinesMacros.xdef"
 };
-
 
 
 //#if defined(DISCOVER_FEATUES_BY_NAME)
