@@ -53,7 +53,7 @@ LIST (APPEND CMAKE_PREFIX_PATH "${MAINFOLDER}/thirdparty")
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/tools/share/cmake)
 
-INCLUDE_DIRECTORIES("${MAINFOLDER}/include" "${MAINFOLDER}/src")
+INCLUDE_DIRECTORIES("${MAINFOLDER}/include" "${MAINFOLDER}/include/FeaturesTogglePlusPlus" "${MAINFOLDER}/src")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 #
@@ -89,6 +89,7 @@ ENDFOREACH (CONFIGINPUT ${CONFIGINPUTS})
 # Add Build Targets
 #
 ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(include/FeatureTogglesPlusPlus)
 ADD_SUBDIRECTORY(test)
 
 
