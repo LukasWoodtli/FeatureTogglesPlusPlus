@@ -15,7 +15,7 @@
 /************************************************************************************/
 
 
-#include "FeatureTogglesPlusPlus/FeatureToggles.h"
+#include "FeaturesTogglePlusPlus/FeatureToggles.h"
 #include "Feature.h"
 
 // ifdef

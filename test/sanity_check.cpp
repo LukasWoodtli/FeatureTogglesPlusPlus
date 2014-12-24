@@ -1,4 +1,4 @@
-#include "FeatureTogglesPlusPlus/FeatureToggles.h"
+#include "FeaturesTogglePlusPlus/FeatureToggles.h"
 
 #include <string>
 using std::string;

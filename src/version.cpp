@@ -1,4 +1,4 @@
-#include <FeatureTogglesPlusPlus/version.h>
+#include <FeaturesTogglePlusPlus/version.h>
 #include "libraryinfo.h"
 
 EXTERNC int projectname_version_major()

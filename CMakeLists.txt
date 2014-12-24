@@ -89,7 +89,7 @@ ENDFOREACH (CONFIGINPUT ${CONFIGINPUTS})
 # Add Build Targets
 #
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(include/FeatureTogglesPlusPlus)
+ADD_SUBDIRECTORY(include/FeaturesTogglePlusPlus)
 ADD_SUBDIRECTORY(test)
 
 
