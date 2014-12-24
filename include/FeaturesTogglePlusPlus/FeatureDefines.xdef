@@ -1,0 +1,5 @@
+FEATURE_DEFINE(MyFirstFeature, StaticFeature, true)
+FEATURE_DEFINE(MySecondFeature, StaticFeature, false)
+FEATURE_DEFINE(MyDynamicFeature, DynamicFeature, false)
+
+
